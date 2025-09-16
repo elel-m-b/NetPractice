@@ -1,7 +1,7 @@
 # NetPractice Made Simple
 
 <div align="center">
-  <img src="./netpractice-image.png" alt="NetPractice Project" width="800"/>
+  <img src="Netpractice.png" alt="NetPractice Project" width="800"/>
 </div>
 
 ## 📋 Table of Contents
