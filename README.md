@@ -1,4 +1,4 @@
-# NetPractice Made Simple
+                                # NetPractice Made Simple
 
 <div align="center">
   <img src="Netpractice.png" alt="NetPractice Project" width="800"/>
