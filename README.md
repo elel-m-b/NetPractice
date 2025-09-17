@@ -15,11 +15,7 @@
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Levels Overview](#levels-overview)
-- [Tips and Tricks](#tips-and-tricks)
-- [Common Mistakes](#common-mistakes)
 - [Resources](#resources)
-- [Contributing](#contributing)
-- [Author](#author)
 
 ## 🌟 Introduction
 
@@ -133,20 +129,13 @@ By completing this project, you will understand:
 - [Networking Fundamentals](https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13769-5.html)
 - [Subnetting Tutorial](https://www.professormesser.com/network-plus/n10-007/subnetting/)
 - [TCP/IP Guide](https://www.tcpipguide.com/)
-
-## 👨‍💻 Author
-
+----------------------------------------
 **elel-m-b** - *1337-Rabat*
 
 - GitHub: [@elel-m-b](https://github.com/elel-m-b)
 - 42 Profile: elel-m-b
 - Campus: 1337 Rabat
 
----
-
-<div align="center">
-  
-**Made with ❤️ for the 42 community**
 
 *Happy networking! 🌐*
 
