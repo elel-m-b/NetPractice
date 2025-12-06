@@ -4,139 +4,130 @@
   <img src="Netpractice.png" alt="NetPractice Project" width="800"/>
 </div>
 
-## 📋 Table of Contents
+# OSI Model Reference
 
-- [Introduction](#introduction)
-- [What is NetPractice?](#what-is-netpractice)
-- [Project Overview](#project-overview)
-- [Learning Objectives](#learning-objectives)
-- [Key Concepts](#key-concepts)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Levels Overview](#levels-overview)
-- [Resources](#resources)
+<div align="center">
 
-## 🌟 Introduction
+## The 7-Layer Network Architecture
 
-**NetPractice Made Simple** is your comprehensive guide to mastering network concepts through the 42 School NetPractice project. This project demystifies TCP/IP addressing, subnetting, and routing in an interactive and practical way.
-
-Whether you're a beginner looking to understand network fundamentals or someone preparing for the NetPractice evaluation, this repository provides clear explanations, practical examples, and step-by-step solutions.
-
-## 🔗 What is NetPractice?
-
-NetPractice is a 42 School project designed to teach students about:
-- **IP addressing** and subnet masks
-- **Network routing** and switch configuration
-- **TCP/IP protocol** fundamentals
-- **Subnetting** and network segmentation
-- **Network troubleshooting** skills
-
-The project consists of 10 levels, each presenting increasingly complex network scenarios that require proper configuration to achieve connectivity.
-
-## 🎯 Project Overview
-
-This project teaches practical networking through hands-on configuration exercises. You'll learn to:
-
-- Configure IP addresses and subnet masks
-- Set up routing tables
-- Understand network switches and routers
-- Implement proper network segmentation
-- Troubleshoot connectivity issues
-
-## 📚 Learning Objectives
-
-By completing this project, you will understand:
-
-- **Binary and decimal** IP address conversion
-- **CIDR notation** and subnet calculations
-- **Default gateways** and routing principles
-- **Network Address Translation (NAT)**
-- **Broadcast and network addresses**
-- **Public vs Private** IP address ranges
-
-## 🔑 Key Concepts
-
-### IP Addresses
-- **IPv4 format**: 32-bit addresses (e.g., 192.168.1.1)
-- **Classes**: A, B, C networks
-- **Private ranges**: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
-
-### Subnet Masks
-- **Purpose**: Define network and host portions
-- **CIDR notation**: /24, /16, /8
-- **Calculation**: Determining available hosts
-
-### Routing
-- **Default gateway**: Path to external networks
-- **Routing tables**: Network destination mapping
-- **Next hop**: Router forwarding decisions
-
-## 🎮 Levels Overview
-
-| Level | Difficulty | Focus Area | Key Concepts |
-|-------|------------|------------|--------------|
-| 1 | Beginner | Basic IP | Simple addressing |
-| 2 | Beginner | Subnet masks | CIDR notation |
-| 3 | Intermediate | Switches | Network segments |
-| 4 | Intermediate | Routing | Default gateway |
-| 5 | Intermediate | Complex routing | Multiple networks |
-| 6 | Advanced | Internet connection | Public/Private IPs |
-| 7 | Advanced | Complex topology | Multi-hop routing |
-| 8 | Advanced | NAT configuration | Address translation |
-| 9 | Expert | Full network | Complete setup |
-| 10 | Expert | Challenge | All concepts |
-
-## 💡 Tips and Tricks
-
-### 🎯 Essential Tips
-
-- **Start simple**: Begin with basic IP addressing
-- **Use calculators**: Subnet calculators help verify your work
-- **Draw diagrams**: Visualize the network topology
-- **Check ranges**: Ensure IPs are in the same subnet
-- **Test systematically**: Verify each connection step by step
-
-### 📊 Subnet Calculation Quick Reference
-
+```mermaid
+graph TD
+    classDef default fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000
+    
+    A[Layer 7<br/>Application<br/>HTTP, FTP, SMTP] --> B[Layer 6<br/>Presentation<br/>Encryption, Compression]
+    B --> C[Layer 5<br/>Session<br/>Connection Management]
+    C --> D[Layer 4<br/>Transport<br/>TCP, UDP]
+    D --> E[Layer 3<br/>Network<br/>IP, Routing]
+    E --> F[Layer 2<br/>Data Link<br/>MAC, Switches]
+    F --> G[Layer 1<br/>Physical<br/>Cables, Signals]
+    
+    class A,B,C,D,E,F,G default
 ```
-/24 = 255.255.255.0   → 254 hosts
-/25 = 255.255.255.128 → 126 hosts  
-/26 = 255.255.255.192 → 62 hosts
-/27 = 255.255.255.224 → 30 hosts
-/28 = 255.255.255.240 → 14 hosts
-/29 = 255.255.255.248 → 6 hosts
-/30 = 255.255.255.252 → 2 hosts
-```
-
-## ⚠️ Common Mistakes
-
-- **Wrong subnet calculations**
-- **Forgetting default routes**
-- **Using network/broadcast addresses**
-- **Overlapping IP ranges**
-- **Incorrect interface configurations**
-- **Missing routing entries**
-
-## 📖 Resources
-
-### 🌐 Online Tools
-- [Subnet Calculator](https://www.subnet-calculator.com/)
-- [IP Calculator](https://jodies.de/ipcalc)
-- [Network Tools](https://network-tools.com/)
-
-### 📚 Learning Materials
-- [Networking Fundamentals](https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13769-5.html)
-- [Subnetting Tutorial](https://www.professormesser.com/network-plus/n10-007/subnetting/)
-- [TCP/IP Guide](https://www.tcpipguide.com/)
-----------------------------------------
-**elel-m-b** - *1337-Rabat*
-
-- GitHub: [@elel-m-b](https://github.com/elel-m-b)
-- 42 Profile: elel-m-b
-- Campus: 1337 Rabat
-
-
-*Happy networking! 🌐*
 
 </div>
+
+## Overview
+
+The **OSI (Open Systems Interconnection) Model** is a conceptual framework that standardizes network communication into 7 distinct layers. Each layer has specific responsibilities and communicates with the layers directly above and below it.
+
+---
+
+## Layer Descriptions
+
+### Layer 7 - Application
+**What users interact with**
+- Protocols: HTTP, HTTPS, FTP, SMTP, DNS
+- Where applications access network services
+- Example: Web browsers, email clients
+
+### Layer 6 - Presentation
+**Data translation and encryption**
+- Converts data formats between application and network
+- Handles encryption/decryption
+- Data compression
+- Example: SSL/TLS, JPEG, ASCII
+
+### Layer 5 - Session
+**Connection management**
+- Establishes, maintains, and terminates sessions
+- Synchronization and dialog control
+- Example: NetBIOS, RPC
+
+### Layer 4 - Transport
+**End-to-end communication**
+- Protocols: TCP (reliable), UDP (fast)
+- Segmentation and flow control
+- Port numbers (0-65535)
+- Example: TCP port 80 for HTTP
+
+### Layer 3 - Network
+**Routing and addressing**
+- Protocols: IP, ICMP, routing protocols
+- Logical addressing (IP addresses)
+- Packet forwarding between networks
+- Example: Routers operate here
+
+### Layer 2 - Data Link
+**Node-to-node transfer**
+- Protocols: Ethernet, Wi-Fi (802.11)
+- MAC addresses
+- Error detection
+- Example: Switches operate here
+
+### Layer 1 - Physical
+**Physical transmission**
+- Cables, wireless signals
+- Electrical/optical signals
+- Network hardware
+- Example: Ethernet cables, fiber optics, radio waves
+
+---
+
+## Mnemonic to Remember
+
+**Top to Bottom:** "All People Seem To Need Data Processing"  
+**Bottom to Top:** "Please Do Not Throw Sausage Pizza Away"
+
+---
+
+## Data Flow
+
+```
+Application Layer    →  Data
+Presentation Layer   →  Data
+Session Layer        →  Data
+Transport Layer      →  Segments
+Network Layer        →  Packets
+Data Link Layer      →  Frames
+Physical Layer       →  Bits
+```
+
+---
+
+## Key Concepts
+
+- **Encapsulation**: Each layer adds its own header as data moves down
+- **Decapsulation**: Headers are removed as data moves up
+- **PDU (Protocol Data Unit)**: Data at each layer has a specific name
+- **Peer Communication**: Each layer communicates with its corresponding layer on the receiving end
+
+---
+
+## Common Protocols by Layer
+
+| Layer | Protocols |
+|-------|-----------|
+| 7 - Application | HTTP, HTTPS, FTP, SMTP, DNS, SSH |
+| 6 - Presentation | SSL/TLS, MIME, JPEG, GIF |
+| 5 - Session | NetBIOS, PPTP, RPC |
+| 4 - Transport | TCP, UDP |
+| 3 - Network | IP, ICMP, ARP, OSPF, BGP |
+| 2 - Data Link | Ethernet, PPP, 802.11 (Wi-Fi) |
+| 1 - Physical | Ethernet cables, USB, Bluetooth |
+
+---
+
+## Resources
+
+- [OSI Model - Wikipedia](https://en.wikipedia.org/wiki/OSI_model)
+- [Cloudflare - What is the OSI Model?](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/)
