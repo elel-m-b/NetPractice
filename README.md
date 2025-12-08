@@ -8,6 +8,7 @@
 
 ---
 </div>
+
 ## 📖 Description
 
 NetPractice is a network configuration training project designed to develop practical understanding of TCP/IP addressing and network topology. The project presents a series of networking exercises where you configure network devices to establish proper communication between hosts.
@@ -87,6 +88,86 @@ graph TD
 ### Overview
 
 The **OSI (Open Systems Interconnection) Model** is a conceptual framework that standardizes network communication into 7 distinct layers. Each layer has specific responsibilities and communicates with the layers directly above and below it.
+
+---
+
+### Alternative OSI Visualizations
+
+#### Color-Coded OSI Model
+
+```mermaid
+graph TD
+    classDef application fill:#e3f2fd,stroke:#1976d2,stroke-width:3px,color:#000000
+    classDef presentation fill:#f3e5f5,stroke:#7b1fa2,stroke-width:3px,color:#000000
+    classDef session fill:#fff3e0,stroke:#f57c00,stroke-width:3px,color:#000000
+    classDef transport fill:#e8f5e9,stroke:#388e3c,stroke-width:3px,color:#000000
+    classDef network fill:#fff9c4,stroke:#fbc02d,stroke-width:3px,color:#000000
+    classDef datalink fill:#ffe0b2,stroke:#e64a19,stroke-width:3px,color:#000000
+    classDef physical fill:#ffebee,stroke:#c62828,stroke-width:3px,color:#000000
+    
+    A[Layer 7<br/>Application<br/>HTTP, FTP, SMTP, DNS] --> B[Layer 6<br/>Presentation<br/>SSL/TLS, JPEG, ASCII]
+    B --> C[Layer 5<br/>Session<br/>NetBIOS, RPC]
+    C --> D[Layer 4<br/>Transport<br/>TCP, UDP, Ports]
+    D --> E[Layer 3<br/>Network<br/>IP, ICMP, Routing]
+    E --> F[Layer 2<br/>Data Link<br/>Ethernet, MAC, Switches]
+    F --> G[Layer 1<br/>Physical<br/>Cables, Radio, Fiber]
+    
+    class A application
+    class B presentation
+    class C session
+    class D transport
+    class E network
+    class F datalink
+    class G physical
+```
+
+#### OSI Model with PDU Names
+
+```mermaid
+graph TD
+    classDef default fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000
+    
+    A[Layer 7 - Application<br/>Data<br/>HTTP, HTTPS, FTP] --> B[Layer 6 - Presentation<br/>Data<br/>SSL/TLS, Encoding]
+    B --> C[Layer 5 - Session<br/>Data<br/>Session Control]
+    C --> D[Layer 4 - Transport<br/>Segments/Datagrams<br/>TCP/UDP]
+    D --> E[Layer 3 - Network<br/>Packets<br/>IP Addresses]
+    E --> F[Layer 2 - Data Link<br/>Frames<br/>MAC Addresses]
+    F --> G[Layer 1 - Physical<br/>Bits<br/>Electrical Signals]
+    
+    class A,B,C,D,E,F,G default
+```
+
+#### Encapsulation Process
+
+```mermaid
+graph TD
+    classDef data fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000000
+    classDef header fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000000
+    
+    A[Application Data] --> B[+ Presentation Header]
+    B --> C[+ Session Header]
+    C --> D[+ TCP/UDP Header<br/>= Segment]
+    D --> E[+ IP Header<br/>= Packet]
+    E --> F[+ Ethernet Header<br/>= Frame]
+    F --> G[Convert to Bits<br/>= Bitstream]
+    
+    class A data
+    class B,C,D,E,F,G header
+```
+
+#### Network Devices by OSI Layer
+
+```mermaid
+graph TD
+    classDef default fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000
+    
+    A[Layer 7-5<br/>Application/Presentation/Session<br/>Firewall, Proxy] --> D[Layer 4<br/>Transport<br/>Load Balancer]
+    D --> E[Layer 3<br/>Network<br/>Router, Layer 3 Switch]
+    E --> F[Layer 2<br/>Data Link<br/>Switch, Bridge]
+    F --> G[Layer 1<br/>Physical<br/>Hub, Repeater, Cables]
+    
+    class A,D,E,F,G default
+```
 
 ---
 
