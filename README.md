@@ -7,7 +7,7 @@
 <img src="Netpractice.png" alt="NetPractice Project" width="800"/>
 
 ---
-
+</div>
 ## 📖 Description
 
 NetPractice is a network configuration training project designed to develop practical understanding of TCP/IP addressing and network topology. The project presents a series of networking exercises where you configure network devices to establish proper communication between hosts.
@@ -332,5 +332,3 @@ The project is evaluated based on:
 ---
 
 *For questions or suggestions, please open an issue on the repository.*
-
-</div>
