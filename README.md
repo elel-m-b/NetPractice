@@ -67,6 +67,94 @@ No compilation required — this is a web-based training interface.
 
 ---
 
+## 🎯 Project Levels
+
+Navigate through 10 progressive networking challenges, each building upon previous concepts:
+
+### Level 1 - Basic IP Configuration
+<img src="img/level1.png" alt="Level 1" width="700"/>
+
+Introduction to IP addressing and basic network connectivity.
+
+---
+
+### Level 2 - Subnet Fundamentals
+<img src="img/level2.png" alt="Level 2" width="700"/>
+
+Learn subnet mask calculations and network segmentation.
+
+---
+
+### Level 3 - Multiple Networks
+<img src="img/level3.png" alt="Level 3" width="700"/>
+
+Configure multiple isolated network segments.
+
+---
+
+### Level 4 - Router Introduction
+<img src="img/level4.png" alt="Level 4" width="700"/>
+
+First encounter with routing between different networks.
+
+---
+
+### Level 5 - Complex Routing
+<img src="img/level5.png" alt="Level 5" width="700"/>
+
+Advanced routing configurations and path selection.
+
+---
+
+### Level 6 - Internet Gateway
+<img src="img/level6.png" alt="Level 6" width="700"/>
+
+Connect local networks to external internet destinations.
+
+---
+
+### Level 7 - Multi-Router Networks
+<img src="img/level7.png" alt="Level 7" width="700"/>
+
+Manage communication across multiple router hops.
+
+---
+
+### Level 8 - Advanced Topologies
+<img src="img/level8.png" alt="Level 8" width="700"/>
+
+Complex network designs with multiple interconnected segments.
+
+---
+
+### Level 9 - Enterprise Networks
+<img src="img/level9.png" alt="Level 9" width="700"/>
+
+Large-scale network architecture simulation.
+
+---
+
+### Level 10 - Master Challenge
+<img src="img/level10.png" alt="Level 10" width="700"/>
+
+The ultimate networking configuration challenge combining all concepts.
+
+---
+
+## 📊 Additional Resources
+
+<div align="center">
+
+### Subnetting Reference
+<img src="img/subnutting.webp" alt="Subnetting Guide" width="600"/>
+
+### Evaluation Criteria
+<img src="img/evaluation.png" alt="Evaluation" width="600"/>
+
+</div>
+
+---
+
 ## 🔌 OSI Model Reference
 
 ### The 7-Layer Network Architecture
