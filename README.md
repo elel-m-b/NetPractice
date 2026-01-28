@@ -4,8 +4,6 @@
 
 *This project has been created as part of the 42 curriculum by elel-m-b*
 
-<img src="Netpractice.png" alt="NetPractice Project" width="800"/>
-
 ---
 </div>
 
@@ -29,7 +27,7 @@ Through hands-on problem-solving, this project builds essential skills for netwo
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/netpractice.git
+git clone https://github.com/elel-m-b/netpractice.git
 cd netpractice
 ```
 
@@ -67,91 +65,203 @@ No compilation required — this is a web-based training interface.
 
 ---
 
-## 🎯 Project Levels
+## 📡 Networking Fundamentals
 
-Navigate through 10 progressive networking challenges, each building upon previous concepts:
+### IP Address Overview
 
-### Level 1 - Basic IP Configuration
-<img src="img/level1.png" alt="Level 1" width="700"/>
+An **IP address** (Internet Protocol address) is a unique numerical identifier assigned to each device on a network. It serves two main purposes: identifying the host and providing the location of the host in the network.
 
-Introduction to IP addressing and basic network connectivity.
+<img width="800" height="350" alt="image" src="https://github.com/user-attachments/assets/9eb50557-13a1-4182-b1a6-f6fb18b5f816" />
 
----
+**Structure:**
+- IPv4 addresses consist of **4 bytes (32 bits)** total
+- Written in dotted decimal notation: `192.168.1.1`
+- Each byte (octet) ranges from **0 to 255**
+- Example breakdown:
+  - `192.168.1.1`
+  - Binary: `11000000.10101000.00000001.00000001`
+  - Each section is 8 bits (1 byte)
 
-### Level 2 - Subnet Fundamentals
-<img src="img/level2.png" alt="Level 2" width="700"/>
-
-Learn subnet mask calculations and network segmentation.
-
----
-
-### Level 3 - Multiple Networks
-<img src="img/level3.png" alt="Level 3" width="700"/>
-
-Configure multiple isolated network segments.
-
----
-
-### Level 4 - Router Introduction
-<img src="img/level4.png" alt="Level 4" width="700"/>
-
-First encounter with routing between different networks.
+**Address Classes:**
+- **Class A**: 1.0.0.0 to 126.255.255.255 (Large networks)
+- **Class B**: 128.0.0.0 to 191.255.255.255 (Medium networks)
+- **Class C**: 192.0.0.0 to 223.255.255.255 (Small networks)
 
 ---
 
-### Level 5 - Complex Routing
-<img src="img/level5.png" alt="Level 5" width="700"/>
+### Public IP vs Private IP
 
-Advanced routing configurations and path selection.
+<img width="922" height="599" alt="image" src="https://github.com/user-attachments/assets/aed3cb21-2a09-489c-b675-d0062adf98bf" />
 
----
+**Public IP Addresses:**
+- Globally unique addresses assigned by ISPs
+- Routable on the internet
+- Visible to the outside world
+- Used to identify your network on the internet
+- Example: `203.0.113.5`
 
-### Level 6 - Internet Gateway
-<img src="img/level6.png" alt="Level 6" width="700"/>
+**Private IP Addresses (RFC 1918):**
+Reserved address ranges for internal networks, not routable on the internet:
 
-Connect local networks to external internet destinations.
+- **Class A**: `10.0.0.0` to `10.255.255.255` (10.0.0.0/8)
+- **Class B**: `172.16.0.0` to `172.31.255.255` (172.16.0.0/12)
+- **Class C**: `192.168.0.0` to `192.168.255.255` (192.168.0.0/16)
 
----
-
-### Level 7 - Multi-Router Networks
-<img src="img/level7.png" alt="Level 7" width="700"/>
-
-Manage communication across multiple router hops.
-
----
-
-### Level 8 - Advanced Topologies
-<img src="img/level8.png" alt="Level 8" width="700"/>
-
-Complex network designs with multiple interconnected segments.
+**Key Differences:**
+- Private IPs allow multiple devices to share one public IP via NAT (Network Address Translation)
+- Private networks are isolated from direct internet access
+- Routers translate private IPs to public IPs for internet communication
+- Private IPs can be reused across different organizations
 
 ---
 
-### Level 9 - Enterprise Networks
-<img src="img/level9.png" alt="Level 9" width="700"/>
+### Subnet Mask
 
-Large-scale network architecture simulation.
+A **subnet mask** determines which portion of an IP address represents the network and which part represents the host.
+
+**Purpose:**
+- Divides IP address into network and host portions
+- Enables network segmentation and organization
+- Controls the size of a network (number of available hosts)
+
+**Common Subnet Masks:**
+
+| CIDR Notation | Subnet Mask | Usable Hosts | Use Case |
+|---------------|-------------|--------------|----------|
+| /8 | 255.0.0.0 | 16,777,214 | Massive networks |
+| /16 | 255.255.0.0 | 65,534 | Large organizations |
+| /24 | 255.255.255.0 | 254 | Small office networks |
+| /25 | 255.255.255.128 | 126 | Small departments |
+| /26 | 255.255.255.192 | 62 | Very small subnets |
+| /30 | 255.255.255.252 | 2 | Point-to-point links |
+
+**Example:**
+- IP: `192.168.1.10`
+- Mask: `255.255.255.0` (/24)
+- Network: `192.168.1.0`
+- Host portion: `.10`
+- Broadcast: `192.168.1.255`
+- Usable range: `192.168.1.1` to `192.168.1.254`
+
+**Calculation Tips:**
+- /24 means the first 24 bits are network, last 8 bits are host
+- Formula for usable hosts: 2^(host bits) - 2
+- Subtract 2 for network address and broadcast address
 
 ---
 
-### Level 10 - Master Challenge
-<img src="img/level10.png" alt="Level 10" width="700"/>
+### Router
 
-The ultimate networking configuration challenge combining all concepts.
+A **router** is a network device that forwards data packets between different networks based on IP addresses.
+
+**Key Functions:**
+- **Connects different networks**: Links separate IP networks together
+- **Routes traffic**: Determines the best path for data packets
+- **Maintains routing tables**: Stores information about network destinations
+- **Network segmentation**: Isolates broadcast domains
+
+**Router Components:**
+- **Interfaces**: Each interface connects to a different network
+- **Routing Table**: Contains destination networks and next-hop information
+- **Default Gateway**: Router's IP address used by hosts to reach other networks
+
+**Routing Table Example:**
+```
+Destination     | Next Hop      | Interface
+----------------|---------------|----------
+192.168.1.0/24  | 0.0.0.0       | eth0 (directly connected)
+10.0.0.0/8      | 192.168.1.254 | eth0
+0.0.0.0/0       | 172.16.0.1    | eth1 (default route)
+```
+
+**Important Concepts:**
+- **Default Route (0.0.0.0/0)**: The path used when no specific route matches
+- **Next Hop**: The IP address of the next router in the path
+- **Directly Connected**: Networks attached to the router's interfaces
+- Routers operate at **Layer 3 (Network Layer)** of the OSI model
+
+**In NetPractice:**
+- Each router interface must have an IP in the network it connects to
+- Routers need routes to reach non-directly-connected networks
+- The default gateway on hosts points to the router interface IP
 
 ---
 
-## 📊 Additional Resources
+### Switch
 
-<div align="center">
+A **switch** is a network device that connects multiple devices within the same network and forwards data based on MAC addresses.
 
-### Subnetting Reference
-<img src="img/subnutting.webp" alt="Subnetting Guide" width="600"/>
+**Key Functions:**
+- **Connects devices in a LAN**: Links computers, printers, and servers
+- **Layer 2 operation**: Works at the Data Link layer using MAC addresses
+- **MAC address table**: Learns which devices are on which ports
+- **Broadcasts**: Forwards broadcasts to all connected devices
 
-### Evaluation Criteria
-<img src="img/evaluation.png" alt="Evaluation" width="600"/>
+**How Switches Work:**
+1. Receives frame on a port
+2. Reads destination MAC address
+3. Looks up MAC in address table
+4. Forwards frame only to the destination port (or floods if unknown)
 
-</div>
+**Switch vs Router:**
+
+| Feature | Switch | Router |
+|---------|--------|--------|
+| **OSI Layer** | Layer 2 (Data Link) | Layer 3 (Network) |
+| **Addressing** | MAC addresses | IP addresses |
+| **Purpose** | Connect devices in same network | Connect different networks |
+| **Broadcast Domain** | Forwards broadcasts | Blocks broadcasts |
+| **Intelligence** | Learns MAC addresses | Makes routing decisions |
+
+**In NetPractice:**
+- Switches are transparent (don't need configuration)
+- All devices connected to a switch are in the same network
+- Switches don't separate networks—use routers for that
+
+---
+
+### ARP (Address Resolution Protocol)
+
+**ARP** is a protocol used to map IP addresses to MAC addresses on a local network.
+
+**Why ARP is Needed:**
+- Network Layer (Layer 3) uses IP addresses
+- Data Link Layer (Layer 2) uses MAC addresses
+- ARP bridges the gap between these layers
+
+**ARP Request Process:**
+
+1. **Host wants to communicate**: Host A (192.168.1.10) wants to send data to Host B (192.168.1.20)
+2. **ARP Request (Broadcast)**:
+   - Host A broadcasts: "Who has 192.168.1.20? Tell 192.168.1.10"
+   - Sent to MAC address: `FF:FF:FF:FF:FF:FF` (broadcast)
+   - All devices on the network receive it
+3. **ARP Reply (Unicast)**:
+   - Host B responds: "192.168.1.20 is at MAC 00:1A:2B:3C:4D:5E"
+   - Sent directly to Host A's MAC address
+4. **Cache the mapping**:
+   - Host A stores this in its ARP cache for future use
+   - Cache expires after a timeout (typically 20 minutes)
+
+**ARP Cache Example:**
+```
+IP Address      | MAC Address          | Type
+----------------|----------------------|--------
+192.168.1.1     | 00:11:22:33:44:55   | Dynamic
+192.168.1.20    | 00:1A:2B:3C:4D:5E   | Dynamic
+192.168.1.254   | AA:BB:CC:DD:EE:FF   | Dynamic
+```
+
+**Key Points:**
+- ARP only works within the same subnet/broadcast domain
+- Switches forward ARP broadcasts to all ports
+- Routers do not forward ARP broadcasts (boundary of broadcast domain)
+- ARP is vulnerable to spoofing attacks (ARP poisoning)
+
+**Commands to View ARP:**
+- Linux/Mac: `arp -a`
+- Windows: `arp -a`
+- Clear cache: `arp -d` (may require admin privileges)
 
 ---
 
@@ -256,6 +366,84 @@ graph TD
     
     class A,D,E,F,G default
 ```
+
+---
+
+## 🎯 Project Levels
+
+Navigate through 10 progressive networking challenges, each building upon previous concepts:
+
+### Level 1 - Basic IP Configuration
+<img src="img/level1.png" alt="Level 1" width="700"/>
+
+Introduction to IP addressing and basic network connectivity.
+
+---
+
+### Level 2 - Subnet Fundamentals
+<img src="img/level2.png" alt="Level 2" width="700"/>
+
+Learn subnet mask calculations and network segmentation.
+
+---
+
+### Level 3 - Multiple Networks
+<img src="img/level3.png" alt="Level 3" width="700"/>
+
+Configure multiple isolated network segments.
+
+---
+
+### Level 4 - Router Introduction
+<img src="img/level4.png" alt="Level 4" width="700"/>
+
+First encounter with routing between different networks.
+
+---
+
+### Level 5 - Complex Routing
+<img src="img/level5.png" alt="Level 5" width="700"/>
+
+Advanced routing configurations and path selection.
+
+---
+
+### Level 6 - Internet Gateway
+<img src="img/level6.png" alt="Level 6" width="700"/>
+
+Connect local networks to external internet destinations.
+
+---
+
+### Level 7 - Multi-Router Networks
+<img src="img/level7.png" alt="Level 7" width="700"/>
+
+Manage communication across multiple router hops.
+
+---
+
+### Level 8 - Advanced Topologies
+<img src="img/level8.png" alt="Level 8" width="700"/>
+
+Complex network designs with multiple interconnected segments.
+
+---
+
+### Level 9 - Enterprise Networks
+<img src="img/level9.png" alt="Level 9" width="700"/>
+
+Large-scale network architecture simulation.
+
+---
+
+### Level 10 - Master Challenge
+<img src="img/level10.png" alt="Level 10" width="700"/>
+
+The ultimate networking configuration challenge combining all concepts.
+
+---
+
+## 🔗 Documentation & Tutorials
 
 ### 🔗 Documentation & Tutorials
 
