@@ -378,12 +378,24 @@ Navigate through 10 progressive networking challenges, each building upon previo
 
 Introduction to IP addressing and basic network connectivity.
 
+**📘 Learning Concepts:**
+* Understanding IPv4 address structure
+* Using subnet masks to identify networks
+* Recognizing network and broadcast addresses
+* Determining valid host IP ranges
+
 ---
 
 ### Level 2 - Subnet Fundamentals
 <img src="img/level2.png" alt="Level 2" width="700"/>
 
 Learn subnet mask calculations and network segmentation.
+
+**📘 Learning Concepts:**
+* Applying subnet masks of different sizes
+* Understanding binary representation of IP addresses
+* Calculating subnet ranges and usable hosts
+* Introduction to CIDR (slash `/`) notation
 
 ---
 
@@ -392,12 +404,25 @@ Learn subnet mask calculations and network segmentation.
 
 Configure multiple isolated network segments.
 
+**📘 Learning Concepts:**
+* Understanding the role of a switch in a network
+* Connecting multiple hosts within the same network
+* Ensuring consistent subnet masks across devices
+* Applying subnetting concepts to switched networks
+
 ---
 
 ### Level 4 - Router Introduction
 <img src="img/level4.png" alt="Level 4" width="700"/>
 
 First encounter with routing between different networks.
+
+**📘 Learning Concepts:**
+* Understanding the role of a router
+* Connecting multiple networks via router interfaces
+* Choosing appropriate subnet masks
+* Assigning IP addresses within the same network
+* Using only relevant router interfaces for communication
 
 ---
 
@@ -406,12 +431,24 @@ First encounter with routing between different networks.
 
 Advanced routing configurations and path selection.
 
+**📘 Learning Concepts:**
+* Understanding routes, destinations, and next hops
+* Using default routes (`0.0.0.0/0`)
+* Forwarding packets to other networks
+* Identifying correct next hop interfaces
+
 ---
 
 ### Level 6 - Internet Gateway
 <img src="img/level6.png" alt="Level 6" width="700"/>
 
 Connect local networks to external internet destinations.
+
+**📘 Learning Concepts:**
+* Understanding the internet as a routing entity
+* Distinguishing private vs. public IP ranges
+* Applying routing to reach external networks
+* Determining destination networks using subnet masks
 
 ---
 
@@ -420,12 +457,25 @@ Connect local networks to external internet destinations.
 
 Manage communication across multiple router hops.
 
+**📘 Learning Concepts:**
+* Avoiding overlapping IP address ranges
+* Recognizing routers as network boundaries
+* Using subnetting to create multiple non-overlapping networks
+* Assigning IP addresses correctly across routed networks
+
 ---
 
 ### Level 8 - Advanced Topologies
 <img src="img/level8.png" alt="Level 8" width="700"/>
 
 Complex network designs with multiple interconnected segments.
+
+**📘 Learning Concepts:**
+* Understanding end-to-end packet flow to and from the internet
+* Avoiding overlapping IP ranges across multiple networks
+* Using subnetting (/26, /28) to split larger networks into smaller non-overlapping ranges
+* Assigning IP ranges to routers and hosts correctly
+* Configuring next hop addresses for proper routing
 
 ---
 
@@ -434,12 +484,26 @@ Complex network designs with multiple interconnected segments.
 
 Large-scale network architecture simulation.
 
+**📘 Learning Concepts:**
+* Connecting multiple networks to the internet independently
+* Understanding that not all routing table entries need to be filled
+* Using network addresses to allow the internet to respond to hosts
+* Avoiding private IP ranges for internet-facing connections
+* Applying step-by-step network goals to configure routing
+
 ---
 
 ### Level 10 - Master Challenge
 <img src="img/level10.png" alt="Level 10" width="700"/>
 
 The ultimate networking configuration challenge combining all concepts.
+
+**📘 Learning Concepts:**
+* Managing multiple networks simultaneously
+* Ensuring internet destinations cover all host networks
+* Avoiding overlapping IP ranges across networks
+* Using subnet masks to allocate IP ranges for different network segments
+* Assigning IP addresses to interfaces while respecting existing entries
 
 ---
 
