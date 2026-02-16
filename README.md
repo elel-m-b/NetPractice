@@ -1,11 +1,15 @@
 <div align="center">
 
+<!-- Grade image -->
+<img src="img/grade.png" alt="Grade" width="100" />
+
 # 🌐 NetPractice Made Simple
 
 *This project has been created as part of the 42 curriculum by elel-m-b*
 
 ---
 </div>
+
 
 ## 📖 Description
 
