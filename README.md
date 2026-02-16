@@ -1,9 +1,18 @@
 <div align="center">
-<!-- Grade image -->
-<img src="img/grade.png" alt="Grade" width="500" />
-# 🌐 NetPractice Made Simple
-*This project has been created as part of the 42 curriculum by elel-m-b*
----
+   
+<div style="text-align: center;">
+  <!-- Grade image -->
+  <img src="img/grade.png" alt="Grade" style="width: 800px; max-width: 100%; height: auto;" />
+
+  <!-- Heading -->
+  <h1>🌐 NetPractice Made Simple</h1>
+
+  <!-- Description -->
+  <p><em>This project has been created as part of the 42 curriculum by elel-m-b</em></p>
+
+  <hr style="width: 50%; margin: 20px auto;" />
+</div>
+
 </div>
 
 
